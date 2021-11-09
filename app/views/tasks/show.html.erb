@@ -1,0 +1,14 @@
+<div class="container-fluid bg-primary d-flex justify-content-center align-items-center text-light " style="height: 100px;">
+  <h1><%= @task.title %></h1>
+</div>
+
+<div class="container">
+  <h3><%= @task.details %></h3>
+  <h3><%= @task.completed == false ? 'Uncompleted!' : 'Completed!' %></h3>
+</div>
+<%= link_to "Edit", edit_path %>
+<%= link_to "Delete #{@task.title}",
+  task_path(@task),
+  method: :delete,
+  data: { confirm: "Are you sure?" }%>
+<%= link_to "View full tasks", tasks_path %>

@@ -1,3 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'index';
+
+a{
+    color:black;
+    text-decoration: none;
+}

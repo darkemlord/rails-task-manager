@@ -1,0 +1,17 @@
+<div class="container-fluid bg-primary d-flex justify-content-center align-items-center text-light " style="height: 100px;">
+  <h1>Tasks</h1>
+</div>
+<div class="container ">
+  <% @tasks.each do |task| %>
+    <div class= "container d-flex">
+      <% if task.completed %>
+          <em class="far fa-square" id='square'></em>
+        <% else %>
+          <em class="far fa-check-square" id='square'></em>
+        <% end %>
+       <h3><%= link_to task.title, task_path(task) %></h3>
+    </div>
+    <div class="container">
+    </div>
+  <% end %>
+</div>

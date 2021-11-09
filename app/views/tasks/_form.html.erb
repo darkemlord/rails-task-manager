@@ -1,0 +1,9 @@
+<%= form_for(@task) do |f| %>
+  <div class="container d-flex flex-column">
+    <%= f.label :title %>
+    <%= f.text_field :title, class:"form-control" %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <%= f.submit %>
+  </div>
+<% end %>
